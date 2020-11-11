@@ -2,16 +2,6 @@ os: linux
 
 language: generic
 
-# ----------------------------
-# *** 우분투 릴리즈별 코드명  ***
-# Xenial Xerus (16.04)
-# Yakkety Yak (16.10)
-# Zesty Zapus (17.04)
-# Artful Aardvark (17.10)
-# Bionic Beaver (18.04)
-# ----------------------------
-dist: bionic
-
 services:
   - docker
 
