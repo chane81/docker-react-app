@@ -1,0 +1,40 @@
+{
+  "name": "2.react-with-docker",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-scripts": "3.4.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dok-build-dev": "docker build -f Dockerfile.dev -t chane81/docker-react-app ./",
+    "dok-run-dev": "docker run -it -e CHOKIDAR_USEPOLLING=true --name docker-react-app-con -p 3000:3000 -v /usr/src/app/node_modules -v %cd%:/usr/src/app chane81/docker-react-app",
+    "dok-bash": "docker exec -it docker-react-app-con /bin/ash",
+    "dok-del": "docker rm -f docker-react-app-con",
+    "comp-up": "docker-compose up",
+    "comp-down": "docker-compose down"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
