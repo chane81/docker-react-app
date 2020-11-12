@@ -20,8 +20,8 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "ap-northeast-2"
-  app: "docker-react-app"
-  env: "DockerReactApp-env"
+  app: "docker-react-app-v2"
+  env: "DockerReactAppV2-env"
   bucket_name: "elasticbeanstalk-ap-northeast-2-611302950754"
   on:
     branch: master
